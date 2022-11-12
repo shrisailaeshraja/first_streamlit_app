@@ -36,3 +36,8 @@ my_cur.execute("SELECT * from fruit_load_list")
 my_data_row = my_cur.fetchall()
 streamlit.header("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
+
+my_add_fruit = streamlit.text.input('what fruit do you want to add?','apple')
+streamlit.write('the user entered',my_add_fruit)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + my_add_fruit)
+

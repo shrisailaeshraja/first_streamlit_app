@@ -24,7 +24,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-  if not_fruit_choice:
+  if not fruit_choice:
     streamlite.error('enter the correct fruit name')
   else:
     streamlit.write('The user entered ', fruit_choice)

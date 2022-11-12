@@ -2,7 +2,7 @@ import streamlit
 import pandas
 import requests
 import snowflake.connector
-from urllib.error import URLERROR
+from urllib.error import URLError
 
 streamlit.title('my parents healthy dinner')
 streamlit.header('Breakfast menu')
@@ -33,7 +33,7 @@ try:
     streamlit.dataframe(fruityvice_normalized)
 
   
-except URLERROR as e:
+except URLError as e:
   streamlit.error()
     
 streamlit.stop()

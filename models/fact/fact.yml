@@ -5,8 +5,9 @@ models :
     columns: 
        - name : order_id  
          tests :
-           - unique
-           - not_null
+           - primary_key
+                
+
        - name : customer_id
          tests : 
            - not_null
